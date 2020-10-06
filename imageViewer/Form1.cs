@@ -37,7 +37,9 @@ namespace imageViewer
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Программа будет закрыта. Продолжить?", "Закрыть программу?", MessageBoxButtons.OKCancel,MessageBoxIcon.Exclamation) == DialogResult.OK)
+            if (MessageBox.Show("Программа будет закрыта. Продолжить?", "Закрыть программу?",
+                MessageBoxButtons.OKCancel,
+                MessageBoxIcon.Exclamation) == DialogResult.OK)
             {
                 Close();
             }
