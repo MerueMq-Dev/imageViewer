@@ -38,7 +38,7 @@ namespace imageViewer
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true)
+            if (checkBox1.Checked)
             {
                 pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             }
