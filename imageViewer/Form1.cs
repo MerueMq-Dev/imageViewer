@@ -20,7 +20,11 @@ namespace imageViewer
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            pictureBox1.Image = null;
+            if (MessageBox.Show("Область просмотра будет очищена. Продолжить?", "Очистка области просмотра",
+                MessageBoxButtons.OKCancel,MessageBoxIcon.Exclamation) == DialogResult.OK)
+            {
+                pictureBox1.Image = null;
+            }   
         }
 
         private void backgroundButton_Click(object sender, EventArgs e)
@@ -33,7 +37,10 @@ namespace imageViewer
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            Close();
+            if (MessageBox.Show("Программа будет закрыта. Продолжить?", "Закрыть программу?", MessageBoxButtons.OKCancel,MessageBoxIcon.Exclamation) == DialogResult.OK)
+            {
+                Close();
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
